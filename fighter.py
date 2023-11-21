@@ -80,7 +80,6 @@ class Fighter():
         #attack
         if key[pygame.K_SLASH] or key[pygame.K_PERIOD]:
           self.attack(target)
-          #determine which attack type was used
           if key[pygame.K_SLASH]:
             self.attack_type = 1
           if key[pygame.K_PERIOD]:
@@ -107,7 +106,7 @@ class Fighter():
     if self.attack_cooldown > 0:
       self.attack_cooldown -= 1
 
-    #update player position
+    
     self.rect.x += dx
     self.rect.y += dy
 
